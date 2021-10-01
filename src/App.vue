@@ -4,7 +4,7 @@
       <ul class="catalog__list">
         <li class="catalog__item" v-for="(product, index) in products" :key="index">
           <a class="catalog__pic" href="#">
-            <img :src="product.image" alt="product.title">
+            <img :src="product.image" :alt="product.title">
           </a>
 
           <h3 class="catalog__title">
@@ -95,6 +95,7 @@
 </template>
 
 <script>
+
 import products from './data/products'
 
 export default {
