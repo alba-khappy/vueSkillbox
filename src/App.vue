@@ -102,9 +102,7 @@ export default {
   name: 'App',
   data() {
     return {
-      products: [
-        products
-      ]
+      products: products
     }
   }
 };
