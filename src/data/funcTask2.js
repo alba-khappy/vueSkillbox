@@ -1,7 +1,3 @@
-const message = 'alert!!!'
-
-function messageAlert (){
-  alert('message')
+export default function messageAlert(msg) {
+  console.log(msg);
 }
-
-messageAlert();

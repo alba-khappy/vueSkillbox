@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div id="hello"></div>
     <section class="catalog">
       <ul class="catalog__list">
         <li class="catalog__item" v-for="(product, index) in products" :key="index">
@@ -96,15 +97,15 @@
 
 <script>
 
-import products from './data/products'
+import products from './data/products';
 
 export default {
   name: 'App',
   data() {
     return {
-      products: products
-    }
-  }
+      products,
+    };
+  },
 };
 </script>
 
