@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 
 import { firstVariable, secondVariable } from './data/variablesTask2';
 import messageAlert from './data/funcTask2';
