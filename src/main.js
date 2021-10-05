@@ -10,11 +10,10 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: (h) => h(App),
+  components: {
+    'products-item': productsItem,
+  },
 }).$mount('#app');
-
-new Vue({
-  render: (h) => h(productsItem),
-}).$mount('#hello');
 
 messageAlert(firstVariable);
 messageAlert(secondVariable);
