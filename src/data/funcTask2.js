@@ -1,3 +1,3 @@
 export default function messageAlert(msg) {
-  alert(msg);
+  console.log(msg);
 }

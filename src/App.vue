@@ -3,7 +3,8 @@
     <div id="hello"></div>
     <section class="catalog">
       <ul class="catalog__list">
-        <li class="catalog__item" v-for="(product, index) in products" :key="index">
+        <productsItem></productsItem>
+        <!-- <li class="catalog__item" v-for="(product, index) in products" :key="index">
           <a class="catalog__pic" href="#">
             <img :src="product.image" :alt="product.title">
           </a>
@@ -41,7 +42,7 @@
               </label>
             </li>
           </ul>
-        </li>
+        </li> -->
 
       </ul>
 
@@ -98,6 +99,7 @@
 <script>
 
 import products from './data/products';
+// import productsItem from './components/productsItem.vue';
 
 export default {
   name: 'App',
