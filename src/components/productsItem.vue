@@ -6,12 +6,12 @@
 
     <h3 class="catalog__title">
       <a href="#">
-        Радионяня Motorola MBP16
+        {{ productItem.title }}
       </a>
     </h3>
 
     <span class="catalog__price">
-      3 690 ₽
+      {{ productItem.price }}
     </span>
 
     <ul class="colors colors--black">
@@ -47,6 +47,7 @@
 <script>
 export default {
   name: 'productsItem',
+  props: ['productItem'],
 };
 </script>
 

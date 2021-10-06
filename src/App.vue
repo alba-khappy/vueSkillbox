@@ -59,18 +59,12 @@
 
 <script>
 
-import products from './data/products';
 // import ProductsItem from './components/productsItem.vue';
 import productsList from './components/productsList.vue';
 
 export default {
   name: 'App',
   components: { productsList },
-  data() {
-    return {
-      // products,
-    };
-  },
 };
 </script>
 
