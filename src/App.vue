@@ -3,7 +3,6 @@
     <div id="hello"></div>
     <section class="catalog">
       <products-list></products-list>
-        <products-item></products-item>
 
       <ul class="catalog__pagination pagination">
         <li class="pagination__item">

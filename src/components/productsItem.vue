@@ -45,9 +45,9 @@
 </template>
 
 <script>
-// export default {
-//   name: 'productsItem',
-// };
+export default {
+  name: 'productsItem',
+};
 </script>
 
 <style scoped>
