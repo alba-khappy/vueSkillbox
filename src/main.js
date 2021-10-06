@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
-// import HelloWorld from './components/HelloWorld.vue';
+
+import productsList from './components/productsList.vue';
 import productsItem from './components/productsItem.vue';
 
 import { firstVariable, secondVariable } from './data/variablesTask2';
@@ -11,6 +12,7 @@ Vue.config.productionTip = false;
 new Vue({
   render: (h) => h(App),
   components: {
+    'products-list': productsList,
     'products-item': productsItem,
   },
 }).$mount('#app');

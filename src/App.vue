@@ -2,9 +2,8 @@
   <div>
     <div id="hello"></div>
     <section class="catalog">
-      <ul class="catalog__list">
+      <products-list></products-list>
         <products-item></products-item>
-      </ul>
 
       <ul class="catalog__pagination pagination">
         <li class="pagination__item">
@@ -62,15 +61,15 @@
 <script>
 
 import products from './data/products';
-import ProductsItem from './components/productsItem.vue';
-// import productsItem from './components/productsItem.vue';
+// import ProductsItem from './components/productsItem.vue';
+import productsList from './components/productsList.vue';
 
 export default {
   name: 'App',
-  components: { ProductsItem },
+  components: { productsList },
   data() {
     return {
-      products,
+      // products,
     };
   },
 };

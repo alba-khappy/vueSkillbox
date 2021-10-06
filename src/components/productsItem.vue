@@ -45,11 +45,9 @@
 </template>
 
 <script>
-export default {
-  name: 'productsItem',
-  props: {
-  },
-};
+// export default {
+//   name: 'productsItem',
+// };
 </script>
 
 <style scoped>
