@@ -5,43 +5,43 @@ export default [
     image: '/img/radio.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Airpods',
     price: 8770,
-    image: '/img/radio.jpg'
+    image: '/img/airpods.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Велосипед',
     price: 9880,
-    image: '/img/radio.jpg'
+    image: '/img/bicycle.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Скейт',
     price: 3222,
-    image: '/img/radio.jpg'
+    image: '/img/board.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Наушники',
     price: 6999,
-    image: '/img/radio.jpg'
+    image: '/img/headphones.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Телефон 1',
     price: 4555,
-    image: '/img/radio.jpg'
+    image: '/img/phone-2.jpg'
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    title: 'Телефон 2',
     price: 3776,
-    image: '/img/radio.jpg'
+    image: '/img/phone-3.jpg'
   },
   {
     title: 'Радионяня Motorola MBP16',
     price: 8970,
-    image: '/img/radio.jpg'
+    image: '/img/phone-square-1.jpg'
   },
   {
     title: 'Радионяня Motorola MBP16',
     price: 6650,
-    image: '/img/radio.jpg'
+    image: '/img/phone-square-2.jpg'
   }
 ]

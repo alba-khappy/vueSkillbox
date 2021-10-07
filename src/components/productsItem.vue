@@ -1,7 +1,7 @@
 <template>
   <li class="catalog__item">
     <a class="catalog__pic" href="#">
-      <img src="img/radio.jpg" srcset="img/radio@2x.jpg 2x" alt="Название товара">
+      <img :src="productItem.image" alt="Название товара">
     </a>
 
     <h3 class="catalog__title">
