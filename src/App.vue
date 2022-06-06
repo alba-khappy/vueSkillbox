@@ -2,7 +2,7 @@
   <div>
     <div id="hello"></div>
     <section class="catalog">
-      <products-list></products-list>
+      <products-list :products="products"></products-list>
 
       <ul class="catalog__pagination pagination">
         <li class="pagination__item">
@@ -59,21 +59,33 @@
 
 <script>
 
-// import ProductsItem from './components/productsItem.vue';
 import productsList from './components/productsList.vue';
 
 export default {
   name: 'App',
   components: { productsList },
+  data() {
+    return {
+      page: 1,
+      productsPerPage: 3,
+    }
+  },
+  computed: {
+    products(){
+      const offset = (this.page - 1) * this.productsPerPage;
+      return products.slice(offset, offset + this.productsPerPage);
+    }
+  }
 };
 </script>
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+<style>
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
