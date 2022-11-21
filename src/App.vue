@@ -2,70 +2,23 @@
   <div>
     <div id="hello"></div>
     <section class="catalog">
-      <products-list></products-list>
-
-      <ul class="catalog__pagination pagination">
-        <li class="pagination__item">
-          <a class="pagination__link pagination__link--arrow pagination__link--disabled"
-             aria-label="Предыдущая страница">
-            <svg width="8" height="14" fill="currentColor">
-              <use xlink:href="#icon-arrow-left"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link pagination__link--current">
-            1
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">
-            2
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">
-            3
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">
-            4
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">
-            ...
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">
-            10
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link pagination__link--arrow"
-             href="#"
-             aria-label="Следующая страница">
-            <svg width="8" height="14" fill="currentColor">
-              <use xlink:href="#icon-arrow-right"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <ProductList :products="products"></ProductList>
+      <app-pagination :page="page" :count="countProducts" :per-page="productsPerPage"></app-pagination>
     </section>
   </div>
 </template>
 
 <script>
-import productsList from './components/productsList.vue';
+import ProductList from './components/ProductList.vue';
 import products from "./data/products";
+import AppPagination from "./components/AppPagination";
 
 export default {
     name: 'App',
-    components: { productsList },
+    components: { ProductList, AppPagination },
     data() {
         return {
+            products,
             page: 1,
             productsPerPage: 3,
         }
@@ -74,6 +27,9 @@ export default {
         products() {
             const offset = (this.page - 1) * this.productsPerPage;
             return products.slice(offset, offset + this.productsPerPage);
+        },
+        countProducts() {
+            return products.length;
         }
     }
 }
