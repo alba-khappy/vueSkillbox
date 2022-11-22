@@ -9,14 +9,14 @@
 <script>
 
 import ProductItem from './ProductItem.vue';
-// import products from '../data/products';
+import products from '../data/products';
 
 export default {
   name: 'ProductList',
   components: { ProductItem },
   data() {
     return {
-      // products,
+      products,
       // page: 1,
       // productsPerPage: 3,
     };
