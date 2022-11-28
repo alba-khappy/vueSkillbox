@@ -1,47 +1,74 @@
 export default [
   {
+    id: '01',
+    categoryId: 2,
     title: 'Радионяня Motorola MBP16',
     price: 4550,
-    image: '/img/radio.jpg'
+    image: '/img/radio.jpg',
+    colors: ['#8BE000', '#73B6EA', '#FFF', '#FF6B00', '#8BE000', '#FFBE15'],
   },
   {
-    title: 'Airpods',
+    id: '02',
+    categoryId: 3,
+    title: 'Airpods 55',
     price: 8770,
-    image: '/img/airpods.jpg'
+    image: '/img/airpods.jpg',
+    colors: ['#8BE000', '#939393'],
   },
   {
+    id: '03',
+    categoryId: 4,
     title: 'Велосипед',
     price: 9880,
-    image: '/img/bicycle.jpg'
+    image: '/img/bicycle.jpg',
+    colors: ['#73B6EA', '#FFF', '#FF6B00', '#8BE000', '#FFBE15'],
   },
   {
+    id: '04',
+    categoryId: 4,
     title: 'Скейт',
     price: 3222,
-    image: '/img/board.jpg'
+    image: '/img/board.jpg',
+    colors: ['#8BE000', '#222', '#FFF', '#939393', '#FFBE15'],
   },
   {
-    title: 'Наушники',
+    id: '05',
+    categoryId: 3,
+    title: 'Наушники Agua',
     price: 6999,
-    image: '/img/headphones.jpg'
+    image: '/img/headphones.jpg',
+    colors: [ '#222', '#FFF', '#939393', '#FFBE15'],
   },
   {
-    title: 'Телефон 1',
+    id: '06',
+    categoryId: 1,
+    title: 'Телефон Samsung',
     price: 4555,
-    image: '/img/phone-2.jpg'
+    image: '/img/phone-2.jpg',
+    colors: ['#8BE000', '#73B6EA', '#FFF', '#939393'],
   },
   {
-    title: 'Телефон 2',
+    id: '07',
+    categoryId: 1,
+    title: 'Телефон Iphone',
     price: 3776,
-    image: '/img/phone-3.jpg'
+    image: '/img/phone-3.jpg',
+    colors: [ '#73B6EA', '#222', '#FFF', '#FF6B00', '#FFBE15'],
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    id: '08',
+    categoryId: 1,
+    title: 'Телефон Benu j555',
     price: 8970,
-    image: '/img/phone-square-1.jpg'
+    image: '/img/phone-square-1.jpg',
+    colors: ['#FF6B00', '#8BE000', '#939393', '#FFBE15'],
   },
   {
-    title: 'Радионяня Motorola MBP16',
+    id: '09',
+    categoryId: 1,
+    title: 'Телефон Gynly 6558',
     price: 6650,
-    image: '/img/phone-square-2.jpg'
+    image: '/img/phone-square-2.jpg',
+    colors: [ '#73B6EA', '#FF6B00', '#8BE000', '#939393'],
   }
 ]
