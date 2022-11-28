@@ -32,7 +32,6 @@
 export default {
   data(){
       return {
-          color: '#73B6EA',
       };
   },
   name: 'productsItem',
