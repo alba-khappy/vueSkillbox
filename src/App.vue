@@ -11,7 +11,10 @@
       </div>
 
       <div class="content__catalog">
-        <product-filter :price-from.sync="filterPriceFrom" :price-to.sync="filterPriceTo" :category-id.sync="filterCategoryId"></product-filter>
+        <product-filter :price-from.sync="filterPriceFrom"
+                        :price-to.sync="filterPriceTo"
+                        :category-id.sync="filterCategoryId"
+                        :filter-color.sync="filterColor"></product-filter>
 
         <section class="catalog">
           <ProductList :products="products"></ProductList>
@@ -41,6 +44,7 @@ export default {
             filterPriceFrom: 0,
             filterPriceTo: 0,
             filterCategoryId: 0,
+            filterColor: '',
         }
     },
     computed: {
@@ -57,6 +61,11 @@ export default {
 
             if(this.filterCategoryId > 0){
                 filterProducts = filterProducts.filter(product => product.categoryId === this.filterCategoryId)
+            }
+
+            if(this.filterColor){
+                //filterProducts = Array.isArray(product.colors)?product.color.findIndex((color)=>color === "#FFF")>=0:false
+                filterProducts = filterProducts.filter(product => product.color.findIndex((color) => color === "selectedColor"))
             }
 
             return filterProducts;

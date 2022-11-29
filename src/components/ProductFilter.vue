@@ -4,11 +4,13 @@
 
     <form class="filter__form form" action="#" method="get" @submit.prevent="submit">
       <fieldset class="form__block">
+
         <legend class="form__legend">Цена</legend>
         <label class="form__label form__label--price">
           <input class="form__input" type="text" name="min-price" v-model.number="currentPriceFrom">
           <span class="form__value">От</span>
         </label>
+
         <label class="form__label form__label--price">
           <input class="form__input" type="text" name="max-price" v-model.number="currentPriceTo">
           <span class="form__value">До</span>
@@ -34,7 +36,7 @@
                      type="radio"
                      :value="availableColor"
                      v-model="selectedColor"
-                     @click.prevent="checkColor">
+                     >
               <span class="colors__value" :style="{'background-color': availableColor}">
                   </span>
             </label>
@@ -125,7 +127,7 @@
               selectedColor: '',
           }
       },
-      props: ['priceFrom', 'priceTo', 'categoryId'],
+      props: ['priceFrom', 'priceTo', 'categoryId', 'filterColor'],
       computed: {
           categories(){
               return categories;
@@ -141,6 +143,9 @@
           categoryId(value){
               this.currentCategoryId = value;
           },
+          filterColor(){
+              return this.selectedColor;
+          }
       },
       methods: {
           submit(){
@@ -153,9 +158,6 @@
               this.$emit('update:priceTo', 0);
               this.$emit('update:categoryId', 0);
           },
-          checkColor(){
-              console.log(this.selectedColor);
-          }
       }
   }
 </script>

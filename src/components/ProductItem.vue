@@ -14,8 +14,8 @@
       {{ productItem.price }}
     </span>
 
-    <ul class="colors colors--black" v-for="color in productItem.colors">
-      <li class="colors__item">
+    <ul class="colors colors--black">
+      <li class="colors__item" v-for="color in productItem.colors">
         <label class="colors__label">
           <input class="colors__radio sr-only"
                  type="radio"
