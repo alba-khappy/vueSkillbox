@@ -143,8 +143,8 @@
           categoryId(value){
               this.currentCategoryId = value;
           },
-          filterColor(){
-              return this.selectedColor;
+          filterColor(value){
+              return this.selectedColor = value;
           }
       },
       methods: {
@@ -152,11 +152,13 @@
               this.$emit('update:priceFrom', this.currentPriceFrom);
               this.$emit('update:priceTo', this.currentPriceTo);
               this.$emit('update:categoryId', this.currentCategoryId);
+              this.$emit('update:filterColor', this.selectedColor);
           },
           reset(){
               this.$emit('update:priceFrom', 0);
               this.$emit('update:priceTo', 0);
               this.$emit('update:categoryId', 0);
+              this.$emit('update:filterColor', 0);
           },
       }
   }

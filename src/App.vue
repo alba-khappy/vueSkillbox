@@ -15,7 +15,6 @@
                         :price-to.sync="filterPriceTo"
                         :category-id.sync="filterCategoryId"
                         :filter-color.sync="filterColor"></product-filter>
-
         <section class="catalog">
           <ProductList :products="products"></ProductList>
           <app-pagination v-model="page" :count="countProducts" :per-page="productsPerPage"></app-pagination>
@@ -64,8 +63,7 @@ export default {
             }
 
             if(this.filterColor){
-                //filterProducts = Array.isArray(product.colors)?product.color.findIndex((color)=>color === "#FFF")>=0:false
-                filterProducts = filterProducts.filter(product => product.color.findIndex((color) => color === "selectedColor"))
+                filterProducts = filterProducts.filter(product => product.colors.includes(this.selectedColor));
             }
 
             return filterProducts;
