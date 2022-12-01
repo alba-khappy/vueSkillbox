@@ -1,6 +1,6 @@
 <template>
   <li class="catalog__item">
-    <a class="catalog__pic" href="#" @click.prevent="gotoPage('product', {id: product.id})">
+    <a class="catalog__pic" href="#" @click.prevent="gotoPage('product', {id: productItem.id})">
       <img :src="productItem.image" alt="Название товара">
     </a>
 
@@ -11,7 +11,7 @@
     </h3>
 
     <span class="catalog__price">
-      {{ productItem.price }}
+      {{ productItem.price | numberFormat}}
     </span>
 
     <ul class="colors colors--black">
@@ -29,7 +29,8 @@
 </template>
 
 <script>
-  import eventBus from "@/eventBus";
+  import gotoPage from "@/helpers/gotoPage";
+  import numberFormat from "@/helpers/numberFormat";
 
   export default {
     data(){
@@ -38,9 +39,10 @@
     },
     name: 'productsItem',
     methods: {
-        gotoPage(pageName, pageParams){
-            eventBus.$emit('gotoPage', pageName, pageParams)
-        },
+        gotoPage
+    },
+    filters: {
+        numberFormat
     },
     props: ['productItem', 'products'],
   };
