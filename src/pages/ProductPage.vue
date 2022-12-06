@@ -3,19 +3,17 @@
     <div class="content__top">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" @click.prevent="gotoPage('main')">
-            Каталог
-          </a>
+          <router-link class="breadcrumbs__link" :to="{name:'main'}">Каталог</router-link>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link" @click.prevent="gotoPage('main')">
+          <router-link class="breadcrumbs__link" :to="{name:'main'}">
             {{category.title}}
-          </a>
+          </router-link>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__link">
+          <router-link class="breadcrumbs__link" :to="{name:'main'}">
             {{product.title}}
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
@@ -33,7 +31,7 @@
           {{product.title}}
         </h2>
         <div class="item__form">
-          <form class="form" action="#" method="POST">
+          <form class="form" action="#" method="POST" @submit.prevent="addToCart">
             <b class="item__price">
               {{product.price | numberFormat}} ₽
             </b>
@@ -103,7 +101,7 @@
                   </svg>
                 </button>
 
-                <input type="text" value="1" name="count">
+                <input type="text" v-model.number="productAmount">
 
                 <button type="button" aria-label="Добавить один товар">
                   <svg width="12" height="12" fill="currentColor">
@@ -182,20 +180,30 @@
     import numberFormat from "@/helpers/numberFormat";
 
     export default {
-        props: ['pageParams'],
+        data(){
+            return {
+                productAmount: 1,
+            };
+        },
         filters: {
             numberFormat
         },
         computed: {
             product(){
-                return products.find(product => product.id === this.pageParams.id)
+                return products.find(product => product.id === this.$route.params.id)
             },
             category(){
                 return categories.find(category => category.id === this.product.categoryId)
             },
         },
         methods: {
-            gotoPage
+            gotoPage,
+            addToCart(){
+                this.$store.commit(
+                    'addProductToCart',
+                    {productId: this.product.id, amount: this.productAmount}
+                );
+            }
         }
     }
 </script>
