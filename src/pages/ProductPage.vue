@@ -194,16 +194,16 @@
             },
             category(){
                 return categories.find(category => category.id === this.product.categoryId)
-            },
+            }
         },
         methods: {
             gotoPage,
             addToCart(){
                 this.$store.commit(
                     'addProductToCart',
-                    {productId: this.product.id, amount: this.productAmount}
+                    {productId: this.product.id, amount: this.productAmount},
                 );
-            }
+            },
         }
     }
 </script>

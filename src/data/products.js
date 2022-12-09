@@ -1,6 +1,6 @@
 export default [
   {
-    id: '01',
+    id: 1,
     categoryId: 2,
     title: 'Радионяня Motorola MBP16',
     price: 4550,
@@ -8,7 +8,7 @@ export default [
     colors: ['#8BE000', '#73B6EA', '#FFF', '#FF6B00', '#8BE000', '#FFBE15'],
   },
   {
-    id: '02',
+    id: 2,
     categoryId: 3,
     title: 'Airpods 55',
     price: 8770,
@@ -16,7 +16,7 @@ export default [
     colors: ['#8BE000', '#939393'],
   },
   {
-    id: '03',
+    id: 3,
     categoryId: 4,
     title: 'Велосипед',
     price: 9880,
@@ -24,7 +24,7 @@ export default [
     colors: ['#73B6EA', '#FFF', '#FF6B00', '#8BE000', '#FFBE15'],
   },
   {
-    id: '04',
+    id: 4,
     categoryId: 4,
     title: 'Скейт',
     price: 3222,
@@ -32,7 +32,7 @@ export default [
     colors: ['#8BE000', '#222', '#FFF', '#939393', '#FFBE15'],
   },
   {
-    id: '05',
+    id: 5,
     categoryId: 3,
     title: 'Наушники Agua',
     price: 6999,
@@ -40,7 +40,7 @@ export default [
     colors: [ '#222', '#FFF', '#939393', '#FFBE15'],
   },
   {
-    id: '06',
+    id: 6,
     categoryId: 1,
     title: 'Телефон Samsung',
     price: 4555,
@@ -48,7 +48,7 @@ export default [
     colors: ['#8BE000', '#73B6EA', '#FFF', '#939393'],
   },
   {
-    id: '07',
+    id: 7,
     categoryId: 1,
     title: 'Телефон Iphone',
     price: 3776,
@@ -56,7 +56,7 @@ export default [
     colors: [ '#73B6EA', '#222', '#FFF', '#FF6B00', '#FFBE15'],
   },
   {
-    id: '08',
+    id: 8,
     categoryId: 1,
     title: 'Телефон Benu j555',
     price: 8970,
@@ -64,7 +64,7 @@ export default [
     colors: ['#FF6B00', '#8BE000', '#939393', '#FFBE15'],
   },
   {
-    id: '09',
+    id: 9,
     categoryId: 1,
     title: 'Телефон Gynly 6558',
     price: 6650,
